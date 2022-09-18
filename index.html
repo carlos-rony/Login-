@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+    <form>
+        <h1>Login</h1>
+        <input type="text" placeholder="digite seu codigo" id="codigo">
+        <input type="password" placeholder="digite seu senha" id="senha">
+        <input type="submit" onclick="logar(); return false"/>
+    </form>
+
+
+    <script>
+        function logar(){
+
+            var codigo = document.getElementById('codigo').value;
+            var senha = document.getElementById('senha').value;
+    
+            if(codigo == "0017" && senha == "admin"){
+                location.href = "home.html"
+            }else{
+                alert('usuario ou senha incoreto');
+            }
+    
+        }
+    </script>
+</body>
+
+<style>
+
+    body{
+        width: 100%;
+        overflow: hidden;
+        height: 100%;
+    }
+
+    form{
+        width: 300px;
+        margin: 200px auto;
+        text-align: center;
+    }
+
+    h1 {
+    }
+
+    input {
+        display: block;
+        margin: 20px auto;
+        height: 30px;
+        width: 200px;
+    }
+
+    button{
+        height: 30px;
+        width: 200px;
+    }
+</style>
+</html>
